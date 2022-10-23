@@ -31,7 +31,6 @@ public class Main {
                     varName.add(acc[1]);
                     List list1 = new ArrayList<Integer>();
                     list1.add(variable.get(acc[1]));
-                    //System.out.println(list1.add(variable.get(acc[1])));
                     list1.add(Integer.parseInt(acc[3]));
                     while_loop.add(list1);
                     point.add(line + 1);
@@ -41,7 +40,6 @@ public class Main {
         }
         // update the value of variables in while_loop
         if (varName.size() > 0) {
-            //System.out.println(varName);
             for (int y = 0; y < varName.size(); y++) {
                 int k = variable.get(varName.get(y));
                 while_loop.get(y).set(0, k);
@@ -49,7 +47,7 @@ public class Main {
         }
 
     }
-    // finding end for recursion
+    // finding the "end"
     public void checkEnd(String dataa, String[] data, int b) {
         if (dataa.contains("end")) {
             int m = 10;
@@ -67,7 +65,7 @@ public class Main {
             varName.remove(varName.size() - 1);
         }
     }
-// function for running the program
+// function running the program
     public void execution(){
         Readfile rf = new Readfile();
         rf.reading();
